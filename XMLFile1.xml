@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE Message SYSTEM "TSLdistribution.dtd">
+<Message sendTime="20191101T030026" assortmentOperatorId="1027">
+  <Warehouse id="2" deliveryCustomerNumber="40067">
+    <TSLData partNumber="2209864" assortmentOwnerId="1000" ReplenishmentLevel="6" ProductionTSL="4"/>
+    <TSLData partNumber="199949" assortmentOwnerId="1000" ReplenishmentLevel="32" ProductionTSL="20"/>
+    <TSLData partNumber="2239703" assortmentOwnerId="1000" ReplenishmentLevel="24" ProductionTSL="12"/>
+    <TSLData partNumber="2725284" assortmentOwnerId="1000" ReplenishmentLevel="0" ProductionTSL="0"/>
+    <TSLData partNumber="1435793" assortmentOwnerId="1000" ReplenishmentLevel="0" ProductionTSL="0"/>
+    <TSLData partNumber="2393405" assortmentOwnerId="1000" ReplenishmentLevel="0" ProductionTSL="0"/>
+    <TSLData partNumber="2261567" assortmentOwnerId="1000" ReplenishmentLevel="0" ProductionTSL="0"/>
+    <TSLData partNumber="2394986" assortmentOwnerId="1000" ReplenishmentLevel="2" ProductionTSL="2"/>
+    <TSLData partNumber="1112500" assortmentOwnerId="1000" ReplenishmentLevel="60" ProductionTSL="20"/>
+    <TSLData partNumber="805467" assortmentOwnerId="1000" ReplenishmentLevel="20" ProductionTSL="2"/>
+    <TSLData partNumber="581069" assortmentOwnerId="1000" ReplenishmentLevel="12" ProductionTSL="4"/>
+    <TSLData partNumber="382325" assortmentOwnerId="1000" ReplenishmentLevel="31" ProductionTSL="20"/>
+    <TSLData partNumber="1852936" assortmentOwnerId="1000" ReplenishmentLevel="0" ProductionTSL="0"/>
+    <TSLData partNumber="2595118" assortmentOwnerId="1000" ReplenishmentLevel="40" ProductionTSL="10"/>
+    <TSLData partNumber="1935423" assortmentOwnerId="1000" ReplenishmentLevel="2" ProductionTSL="2"/>
+    <TSLData partNumber="2414834" assortmentOwnerId="1000" ReplenishmentLevel="0" ProductionTSL="0"/>
+    <TSLData partNumber="2574410" assortmentOwnerId="1000" ReplenishmentLevel="0" ProductionTSL="0"/>
+    <TSLData partNumber="2069552" assortmentOwnerId="1000" ReplenishmentLevel="0" ProductionTSL="0"/>
+    <TSLData partNumber="2595133" assortmentOwnerId="1000" ReplenishmentLevel="5" ProductionTSL="5"/>
+    <TSLData partNumber="1791182" assortmentOwnerId="1000" ReplenishmentLevel="0" ProductionTSL="0"/>
+    <TSLData partNumber="2659252" assortmentOwnerId="1000" ReplenishmentLevel="2" ProductionTSL="2"/>
+    <TSLData partNumber="2052119" assortmentOwnerId="1000" ReplenishmentLevel="8" ProductionTSL="8"/>
+    <TSLData partNumber="2095030" assortmentOwnerId="1000" ReplenishmentLevel="0" ProductionTSL="0"/>
+    <TSLData partNumber="1781365" assortmentOwnerId="1000" ReplenishmentLevel="1" ProductionTSL="1"/>
+    <TSLData partNumber="2223436" assortmentOwnerId="1000" ReplenishmentLevel="4" ProductionTSL="4"/>
+    <TSLData partNumber="1436919" assortmentOwnerId="1000" ReplenishmentLevel="68" ProductionTSL="50"/>
+    <TSLData partNumber="1436916" assortmentOwnerId="1000" ReplenishmentLevel="50" ProductionTSL="50"/>
+    <TSLData partNumber="2535783" assortmentOwnerId="1000" ReplenishmentLevel="30" ProductionTSL="20"/>
+    <TSLData partNumber="1358497" assortmentOwnerId="1000" ReplenishmentLevel="1" ProductionTSL="1"/>
+    <TSLData partNumber="1436924" assortmentOwnerId="1000" ReplenishmentLevel="62" ProductionTSL="50"/>
+    <TSLData partNumber="1436907" assortmentOwnerId="1000" ReplenishmentLevel="68" ProductionTSL="50"/>
+    <TSLData partNumber="1385410" assortmentOwnerId="1000" ReplenishmentLevel="2" ProductionTSL="2"/>
+    <TSLData partNumber="801991" assortmentOwnerId="1000" ReplenishmentLevel="43" ProductionTSL="25"/>
+    <TSLData partNumber="369187" assortmentOwnerId="1000" ReplenishmentLevel="2" ProductionTSL="2"/>
+    <TSLData partNumber="173171" assortmentOwnerId="1000" ReplenishmentLevel="0" ProductionTSL="0"/>
+    <TSLData partNumber="32774" assortmentOwnerId="1000" ReplenishmentLevel="6" ProductionTSL="2"/>
+    <TSLData partNumber="581068" assortmentOwnerId="1000" ReplenishmentLevel="4" ProductionTSL="4"/>
+    <TSLData partNumber="802996" assortmentOwnerId="1000" ReplenishmentLevel="299" ProductionTSL="200"/>
+    <TSLData partNumber="815363" assortmentOwnerId="1000" ReplenishmentLevel="800" ProductionTSL="700"/>
+    <TSLData partNumber="815140" assortmentOwnerId="1000" ReplenishmentLevel="6" ProductionTSL="2"/>
+    <TSLData partNumber="250570" assortmentOwnerId="1000" ReplenishmentLevel="2" ProductionTSL="2"/>
+    <TSLData partNumber="1385403" assortmentOwnerId="1000" ReplenishmentLevel="2" ProductionTSL="2"/>
+    <TSLData partNumber="1443343" assortmentOwnerId="1000" ReplenishmentLevel="55" ProductionTSL="20"/>
+    <TSLData partNumber="1726426" assortmentOwnerId="1000" ReplenishmentLevel="14" ProductionTSL="6"/>
+    <TSLData partNumber="1331820" assortmentOwnerId="1000" ReplenishmentLevel="0" ProductionTSL="0"/>
+    <TSLData partNumber="1481173" assortmentOwnerId="1000" ReplenishmentLevel="8" ProductionTSL="1"/>
+    <TSLData partNumber="1436912" assortmentOwnerId="1000" ReplenishmentLevel="65" ProductionTSL="50"/>
+    <TSLData partNumber="1357950" assortmentOwnerId="1000" ReplenishmentLevel="2" ProductionTSL="2"/>
+    <TSLData partNumber="1380819" assortmentOwnerId="1000" ReplenishmentLevel="2" ProductionTSL="2"/>
+    <TSLData partNumber="1443344" assortmentOwnerId="1000" ReplenishmentLevel="52" ProductionTSL="20"/>
+    <TSLData partNumber="1432669" assortmentOwnerId="1000" ReplenishmentLevel="0" ProductionTSL="0"/>
+    <TSLData partNumber="1436908" assortmentOwnerId="1000" ReplenishmentLevel="62" ProductionTSL="50"/>
+    <TSLData partNumber="1436901" assortmentOwnerId="1000" ReplenishmentLevel="76" ProductionTSL="50"/>
+    <TSLData partNumber="1505286" assortmentOwnerId="1000" ReplenishmentLevel="10" ProductionTSL="10"/>
+    <TSLData partNumber="1548500" assortmentOwnerId="1000" ReplenishmentLevel="3" ProductionTSL="1"/>
+    <TSLData partNumber="2397640" assortmentOwnerId="1000" ReplenishmentLevel="8" ProductionTSL="4"/>
+    <TSLData partNumber="2659263" assortmentOwnerId="1000" ReplenishmentLevel="0" ProductionTSL="0"/>
+    <TSLData partNumber="1742941" assortmentOwnerId="1000" ReplenishmentLevel="12" ProductionTSL="4"/>
+    <TSLData partNumber="1766955" assortmentOwnerId="1000" ReplenishmentLevel="6" ProductionTSL="2"/>
+    <TSLData partNumber="1432670" assortmentOwnerId="1000" ReplenishmentLevel="0" ProductionTSL="0"/>
+    <TSLData partNumber="1481880" assortmentOwnerId="1000" ReplenishmentLevel="2" ProductionTSL="1"/>
+    <TSLData partNumber="2267167" assortmentOwnerId="1000" ReplenishmentLevel="48" ProductionTSL="36"/>
+    <TSLData partNumber="2285645" assortmentOwnerId="1000" ReplenishmentLevel="4" ProductionTSL="4"/>
+    <TSLData partNumber="1879113" assortmentOwnerId="1000" ReplenishmentLevel="0" ProductionTSL="0"/>
+    <TSLData partNumber="1865196" assortmentOwnerId="1000" ReplenishmentLevel="0" ProductionTSL="0"/>
+    <TSLData partNumber="2454978" assortmentOwnerId="1000" ReplenishmentLevel="1" ProductionTSL="1"/>
+    <TSLData partNumber="2322651" assortmentOwnerId="1000" ReplenishmentLevel="1" ProductionTSL="1"/>
+  </Warehouse>
+  <Warehouse id="6" deliveryCustomerNumber="40093">
+    <TSLData partNumber="2443492" assortmentOwnerId="1000" ReplenishmentLevel="7" ProductionTSL="7"/>
+  </Warehouse>
+</Message>
