@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
+using System.Threading.Tasks;
 using Terminal.Gui;
 
 namespace ShiaiScoreboard
@@ -14,6 +16,12 @@ namespace ShiaiScoreboard
         static private List<Button> btnStop;
         static private List<Button> btnReStart;
         static private List<string> logg;
+        static private List<Tatami> tatamis;
+
+        static private bool running;
+
+        static private ConcurrentQueue<string> messsageQueue;
+        static private ConcurrentQueue<string> loggQueu;
 
         private enum Status
         {
@@ -26,7 +34,7 @@ namespace ShiaiScoreboard
             TRY_STOP
         }
 
-        public static Action running = ShiaiAppScoreboardApp;
+        public static Action app = ShiaiAppScoreboardApp;
 
         static void Main(string[] args)
         {
@@ -36,6 +44,10 @@ namespace ShiaiScoreboard
             btnStop = new List<Button>();
             btnReStart = new List<Button>();
             logg = new List<string>();
+            messsageQueue = new ConcurrentQueue<string>();
+            loggQueu = new ConcurrentQueue<string>();
+            tatamis = new List<Tatami>();
+            running = true;
 
             AddLogg("Starting application");
 
@@ -74,11 +86,41 @@ namespace ShiaiScoreboard
             AddReStartButton("5");
             AddReStartButton("6");
 
-            while (running != null)
+            for (int i = 0; i <6 ; i++)
             {
-                running.Invoke();
+                var t = new Tatami(i + 1, messsageQueue, loggQueu);
+                tatamis.Add(t);
+            }
+
+            Task loggTask = Task.Factory.StartNew(() =>
+            {
+                while(running)
+                {
+                    string text = "";
+                    if (loggQueu.TryDequeue(out text))
+                    {
+                        AddLogg($"{text}");
+                    }
+                }
+            });
+
+            while (app != null)
+            {
+                app.Invoke();
             }
             Application.Shutdown();
+
+            running = false;
+
+            running = false;
+            try
+            {
+                Task.WaitAll(loggTask);
+            }
+            catch (AggregateException ex) // No exception
+            {
+                Console.WriteLine(ex.Flatten().Message);
+            }
         }
 
         static private void SetStatus(int tatami, Status status)
@@ -199,6 +241,7 @@ namespace ShiaiScoreboard
                 Clicked = () => {
                     btnStart[id-1].CanFocus = true;
                     btnStop[id-1].CanFocus = false;
+                    tatamis[id - 1].Disconnect();
                     SetStatus(id, Status.TRY_STOP);
 
                 }
@@ -244,7 +287,7 @@ namespace ShiaiScoreboard
 
             var statusBar = new StatusBar(new StatusItem[] {
                 new StatusItem(Key.F1, "~F1~ Help", () => Help()),
-                new StatusItem(Key.ControlQ, "~^Q~ Quit", () => { if (Quit ()) { running = null; top.Running = false; } })
+                new StatusItem(Key.ControlQ, "~^Q~ Quit", () => { if (Quit ()) { app = null; top.Running = false; } })
             });
 
             top.LayoutComplete += (e) => {
@@ -350,16 +393,24 @@ namespace ShiaiScoreboard
             var dialog = new Dialog("IP address", 30, 5);
             var t = new TextField(0, 0, 15, txtServers[tatami-1].Text);
             var oldIp = t.Text;
+            
             dialog.Add(t);
+            
             dialog.AddButton(new Button("OK", true) { Clicked = () => {
                 txtServers[tatami-1].Text = t.Text;
                 btnStart[tatami - 1].CanFocus = false;
                 btnStop[tatami - 1].CanFocus = true;
-                AddLogg($"Changed IP from {oldIp} to {t.Text} on tatami {tatami}");
-                SetStatus(tatami, Status.TRY_START);
+                Application.MainLoop.Invoke(() =>
+                {
+                    AddLogg($"Changed IP from {oldIp} to {t.Text} on tatami {tatami}");
+                    SetStatus(tatami, Status.TRY_START);
+                });               
+                tatamis[tatami - 1].Connect(t.Text.ToString());
                 dialog.Running = false; } });
+            
             dialog.AddButton(new Button("CANCEL", false) { Clicked = () => { 
                 dialog.Running = false; } });
+            
             Application.Run(dialog);
            
             return "";

@@ -26,6 +26,7 @@ namespace TCPTest
         {
             _queue = queue;
             _screeMessages = screeMessages;
+            
         }
 
         public void DisconnectAndStop()
